@@ -3,6 +3,8 @@ use role chairlift_provider;
 grant install, develop on application package chairlift_pkg to role chairlift_admin;
 
 use role chairlift_admin;
+--drop application chairlift_app;
+
 use warehouse chairlift_wh;
 
 -- create the actual application from the package in versioned dev mode

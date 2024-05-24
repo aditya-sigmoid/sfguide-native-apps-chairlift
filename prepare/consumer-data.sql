@@ -1,4 +1,5 @@
 use role chairlift_admin;
+--drop application chairlift_app;
 use warehouse chairlift_wh;
 
 -- consumer data: streaming readings from sensors on their ski lift machines.

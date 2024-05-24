@@ -52,3 +52,9 @@ grant select on view package_shared.sensor_service_schedules
 -- schema where source code will be uploaded
 create schema if not exists chairlift_pkg.code;
 create stage if not exists chairlift_pkg.code.source;
+
+list @chairlift_pkg.code.source;
+
+alter application package chairlift_pkg add version develop using '@chairlift_pkg.code.source/app';
+
+alter application package chairlift_pkg add patch for version develop using '@chairlift_pkg.code.source/app';
